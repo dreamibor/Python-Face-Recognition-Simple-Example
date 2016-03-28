@@ -1,6 +1,9 @@
 Python Face Recognition Simple Example  
 Python简单实践系列（一）Python照片人脸检测   
-
+  
+教程：  
+http://cloverio.com/?p=316   
+   
 功能：  
 1、读取照片，显示在GUI中  
 2、识别人脸，并画出人脸、眼睛的位置  

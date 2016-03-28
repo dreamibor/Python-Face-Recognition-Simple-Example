@@ -14,7 +14,7 @@ Ubuntu 14.04 LTS + Python 2.7.10 + Face++ 人脸识别API
 2、PyQt4（Ubuntu自带）作为GUI库  
 3、sys、time等内置模块。  
   
-说明：
+说明：  
 1、我的代码全在rec.py文件中  
 2、如果有.idea隐藏文件夹，为Face++ API默认生成  
 3、facepp.py文件为Face++ SDK提供，请搜索下载  

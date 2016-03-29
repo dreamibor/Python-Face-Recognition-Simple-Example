@@ -1,11 +1,11 @@
-from PIL import Image, ImageDraw2
-from facepp import API, File
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
 import sys
 import time
+from PyQt4.QtGui import *
+from PyQt4.QtCore import *
+from facepp import API, File
+from PIL import Image, ImageDraw2
 
-# FACE++ API 
+# FACE++ API
 API_KEY = 'YOUR API KEY HERE'
 API_SECRET = 'YOUR API SECERT HERE'
 
@@ -18,7 +18,6 @@ class FaceRec(QDialog):
         self.setWindowTitle('SimpleFaceRecognition')
         self.img_label = QLabel("Choose A Picture!")
         self.info_label = QLabel('No Picture Selected!')
-        self.changed = False
         self.path = ''
         self.img_width = 0
         self.img_height = 0
@@ -98,9 +97,7 @@ class FaceRec(QDialog):
 
     def open_file(self):
         self.path = str(QFileDialog.getOpenFileName(self, "Open File", "/"))
-        self.changed = True
-        img = QPixmap(self.path)
-        self.img_label.setPixmap(img)
+        self.img_label.setPixmap(QPixmap(self.path))
         self.info_label.setText("Click Reconize Button")
 
     def draw_sign(self):
@@ -112,8 +109,7 @@ class FaceRec(QDialog):
         draw.rectangle(face_coordinate[1], pen)
         draw.rectangle(face_coordinate[2], pen)
         image.save('code.jpg', 'jpeg')
-        img2 = QPixmap('code.jpg')
-        self.img_label.setPixmap(img2)
+        self.img_label.setPixmap(QPixmap('code.jpg'))
         self.info_label.setText(self.information)
 
 def main():
@@ -123,11 +119,6 @@ def main():
 	run.move(400, 400)
 	run.init_ui()
 	run.show()
-	while run.changed:
-    		run.get_result()
-    		run.get_information()
-    		run.calculate_coordinate()
-    		run.changed = False
 	sys.exit(app.exec_())
 
 if __name__ == '__main__':

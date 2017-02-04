@@ -4,9 +4,9 @@ Website：
 http://cloverio.com/?p=316   
    
 Function：  
-1. Read a picture from local files  
-2. Recognise the human face, point out the place of human eyes and face   
-3. Indicate some information about human, including age, sex, race   
+1. Read a picture from local files   
+2. Recognise the human face, point out the place of human eyes and face  
+3. Indicate some information about human, including age, sex, race     
 
 Environment：  
 Ubuntu 14.04 LTS + Python 2.7.10 + Face++ Face Recognition API

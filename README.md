@@ -21,6 +21,3 @@ Notes:
 
 Next:  
 1. Implementing openCV Python to recognise face.  
-
-Website:  
-http://cloverio.com/?p=316  
